@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Numerics;
-using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]private double currencyPerSecond;
     [SerializeField]private float clickValue;
     [SerializeField]private List<BuildScript> builds;
-    [SerializeField] private TMP_Text textTotalIncome, textIncomePerSecond;
+    public System.Action OnCurrencyChanged;
+    
 
     void Awake()
     {
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         int baseValue = 1;
         clickValue = baseValue;
         totalCurrency += (BigInteger)clickValue;
-        
+        OnCurrencyChanged?.Invoke();
     }
     public void CalculatePerSecondIncome()
     {
@@ -38,7 +38,11 @@ public class GameManager : MonoBehaviour
         {
             sum += build.GetProduction();
         }
+        if(currencyPerSecond != sum)
+        {
         currencyPerSecond = sum;
+        OnCurrencyChanged?.Invoke();
+        }
     }
     private void SetPerSecondIncome()
     {
@@ -48,18 +52,38 @@ public class GameManager : MonoBehaviour
             BigInteger amount = (BigInteger)currencyBadomp;
             totalCurrency += amount;
             currencyBadomp -= (double)amount;
+            OnCurrencyChanged?.Invoke();
         }
     }
-    private void UIUpdate()
+   public BigInteger ShareTotalCurrencyAmount()
     {
-        textTotalIncome.text = NumberFormatter.Format(totalCurrency) + " Aura";
-        textIncomePerSecond.text = NumberFormatter.Format(currencyPerSecond) + " a/s";
+        return totalCurrency;
+    }
+    public double ShareCurrencyPerSecondAmount()
+    {
+        return currencyPerSecond;
+    }
+    public void BuyBuild(int index)
+    {
+        BuildScript build = builds[index];
+
+        BigInteger cost = (BigInteger)build.GetCost();
+
+        if (totalCurrency >= cost)
+        {
+            totalCurrency -= cost;
+            build.BuyBuild();
+            OnCurrencyChanged?.Invoke();
+        }
+        else
+        {
+            Debug.Log("Cant buy now");
+        }
     }
     void Update()
     {
         CalculatePerSecondIncome();
         SetPerSecondIncome();
-        UIUpdate();
         Debug.Log("Total Currency: "+totalCurrency);
     }
 }

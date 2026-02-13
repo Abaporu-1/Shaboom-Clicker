@@ -1,17 +1,16 @@
-using UnityEngine;
-
-public class BuildScript:MonoBehaviour
+[System.Serializable]
+public class BuildScript
 {
     public SO_Builds data;
-    [SerializeField] private int level = 0;
-    [SerializeField] private float multiplier = 1f;
+    public int level = 0;
+    public float multiplier = 1f;
     public float GetProduction()
     {
         return (data.baseProduction * multiplier) * level;
     }
     public float GetCost()
     {
-        return data.baseCost * Mathf.Pow(data.priceMultiplier, level);
+        return data.baseCost * UnityEngine.Mathf.Pow(data.priceMultiplier, level);
     }
     public void BuyBuild()
     {
