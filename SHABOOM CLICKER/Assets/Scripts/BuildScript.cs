@@ -1,4 +1,4 @@
-using System.Numerics;
+using UnityEngine;
 [System.Serializable]
 
 public class BuildScript
@@ -10,9 +10,9 @@ public class BuildScript
     {
         return (data.baseProduction * multiplier) * level;
     }
-    public BigInteger GetCost()
+    public double GetCost()
     {
-        return new BigInteger(data.baseCost) * BigInteger.Pow(new BigInteger(data.priceMultiplier), level);
+        return data.baseCost * Mathf.Pow(data.priceMultiplier, level);
     }
     public void BuyBuild()
     {

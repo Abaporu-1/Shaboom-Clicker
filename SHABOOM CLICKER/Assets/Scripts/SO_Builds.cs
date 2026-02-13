@@ -6,5 +6,5 @@ public class SO_Builds : ScriptableObject
     public string buildName;
     public double baseProduction;
     public double  baseCost;
-    public double priceMultiplier;
+    public float priceMultiplier;
 }

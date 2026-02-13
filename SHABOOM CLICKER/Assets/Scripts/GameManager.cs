@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Numerics;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -67,19 +68,25 @@ public class GameManager : MonoBehaviour
     {
         BuildScript build = builds[index];
 
-        BigInteger cost = build.GetCost();
+        BigInteger cost = new BigInteger(build.GetCost());
 
         if (totalCurrency >= cost)
         {
             totalCurrency -= cost;
             build.BuyBuild();
             OnCurrencyChanged?.Invoke();
+            Debug.Log("New cost" + cost);
         }
         else
         {
             Debug.Log("Cant buy now");
         }
     }
+    public List<BuildScript> GetBuilds()
+    {
+        return builds;
+    }
+  
     void Update()
     {
         CalculatePerSecondIncome();

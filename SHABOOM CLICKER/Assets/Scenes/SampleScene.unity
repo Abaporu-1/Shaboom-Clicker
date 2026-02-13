@@ -2340,6 +2340,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   textTotalIncome: {fileID: 334287430}
   textIncomePerSecond: {fileID: 1585278321}
+  costText:
+  - {fileID: 2097407064}
+  - {fileID: 502261354}
+  - {fileID: 1034881711}
+  - {fileID: 1236422548}
+  - {fileID: 181747974}
+  - {fileID: 1056397628}
+  - {fileID: 563585260}
 --- !u!1 &563585258
 GameObject:
   m_ObjectHideFlags: 0
