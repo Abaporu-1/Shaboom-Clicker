@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Workout
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: Workout
-  baseProduction: 6
-  baseCost: 120
+  baseProduction: 1.5
+  baseCost: 115
   priceMultiplier: 1.15

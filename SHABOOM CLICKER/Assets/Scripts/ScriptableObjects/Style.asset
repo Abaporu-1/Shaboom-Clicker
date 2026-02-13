@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Style
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: Style
-  baseProduction: 35
-  baseCost: 1400
+  baseProduction: 6
+  baseCost: 1430
   priceMultiplier: 1.15

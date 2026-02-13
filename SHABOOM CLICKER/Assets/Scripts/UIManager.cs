@@ -4,7 +4,7 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text textTotalIncome, textIncomePerSecond;
-
+    [SerializeField] private TMP_Text[] costText;
 private void Start()
 {
     GameManager.Instance.OnCurrencyChanged += UIAuraAmount;
@@ -23,6 +23,6 @@ private void OnDestroy()
         double currencyPerSecond = GameManager.Instance.ShareCurrencyPerSecondAmount();
         textTotalIncome.text = NumberFormatter.Format(totalCurrency) + " Aura";
         textIncomePerSecond.text = NumberFormatter.Format(currencyPerSecond) + " a/s";
+        
     }
-    
 }

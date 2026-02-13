@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Rizz
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: Rizz
-  baseProduction: 22000
-  baseCost: 260000
+  baseProduction: 1800
+  baseCost: 17350000
   priceMultiplier: 1.15

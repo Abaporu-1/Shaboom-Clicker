@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
     public void CalculatePerSecondIncome()
     {
-        float sum = 0f;
+        double sum = 0f;
         foreach(BuildScript build in builds)
         {
             sum += build.GetProduction();
@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
     {
         BuildScript build = builds[index];
 
-        BigInteger cost = (BigInteger)build.GetCost();
+        BigInteger cost = build.GetCost();
 
         if (totalCurrency >= cost)
         {

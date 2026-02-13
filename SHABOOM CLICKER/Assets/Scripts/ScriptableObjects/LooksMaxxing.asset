@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LooksMaxxing
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: LooksMaxxing
-  baseProduction: 180
-  baseCost: 16000
+  baseProduction: 25
+  baseCost: 15200
   priceMultiplier: 1.15

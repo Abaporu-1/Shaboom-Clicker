@@ -4,7 +4,7 @@ using UnityEngine;
 public class SO_Builds : ScriptableObject
 {
     public string buildName;
-    public float baseProduction;
-    public float  baseCost;
-    public float priceMultiplier;
+    public double baseProduction;
+    public double  baseCost;
+    public double priceMultiplier;
 }

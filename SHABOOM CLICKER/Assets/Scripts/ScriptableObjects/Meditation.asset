@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Meditation
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: Meditation
-  baseProduction: 900
-  baseCost: 190000
+  baseProduction: 100
+  baseCost: 168000
   priceMultiplier: 1.15

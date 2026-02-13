@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ColdBath
   m_EditorClassIdentifier: Assembly-CSharp::SO_Builds
   buildName: ColdBath
-  baseProduction: 4500
-  baseCost: 2200000
+  baseProduction: 400
+  baseCost: 1950000
   priceMultiplier: 1.15

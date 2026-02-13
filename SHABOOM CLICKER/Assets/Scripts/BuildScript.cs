@@ -1,16 +1,18 @@
+using System.Numerics;
 [System.Serializable]
+
 public class BuildScript
 {
     public SO_Builds data;
     public int level = 0;
     public float multiplier = 1f;
-    public float GetProduction()
+    public double GetProduction()
     {
         return (data.baseProduction * multiplier) * level;
     }
-    public float GetCost()
+    public BigInteger GetCost()
     {
-        return data.baseCost * UnityEngine.Mathf.Pow(data.priceMultiplier, level);
+        return new BigInteger(data.baseCost) * BigInteger.Pow(new BigInteger(data.priceMultiplier), level);
     }
     public void BuyBuild()
     {
