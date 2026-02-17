@@ -91,6 +91,6 @@ public class GameManager : MonoBehaviour
     {
         CalculatePerSecondIncome();
         SetPerSecondIncome();
-        Debug.Log("Total Currency: "+totalCurrency);
+        Debug.Log("Total Currency: "+ totalCurrency);
     }
 }

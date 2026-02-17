@@ -24,27 +24,21 @@ public static class NumberFormatter
 
         double shortened = (double)number / System.Math.Pow(1000, magnitude);
 
-        return shortened.ToString("F1") + suffixes[magnitude];
+        return shortened.ToString("F2") + suffixes[magnitude];
     }
     public static string Format(double number)
-{
-    string[] suffixes = 
-    { 
-        "", "K", "M", "B", "T",
-        "Qa", "Qi", "Sx", "Sp", "Oc", "No", "Dc"
-    };
-
-    if (number < 1000)
-        return number.ToString("F1");
-
-    int magnitude = 0;
-
-    while (number >= 1000 && magnitude < suffixes.Length - 1)
     {
-        number /= 1000;
-        magnitude++;
+        if (number < 1000)
+        {
+            return number.ToString("F2");
+        }
+        int magnitude = 0;
+        while (number >= 1000 && magnitude < suffixes.Length - 1)
+        {
+            number /= 1000;
+            magnitude++;
+        }
+        return number.ToString("F2") + suffixes[magnitude];
     }
 
-    return number.ToString("F1") + suffixes[magnitude];
-}
 }
