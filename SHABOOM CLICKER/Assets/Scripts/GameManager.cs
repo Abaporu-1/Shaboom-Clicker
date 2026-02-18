@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Numerics;
-using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,7 +38,7 @@ public class GameManager : MonoBehaviour
         {
             sum += build.GetProduction();
         }
-        if(currencyPerSecond != sum)
+        if(Mathf.Abs((float)(currencyPerSecond - sum)) > 0.0001f)
         {
         currencyPerSecond = sum;
         OnCurrencyChanged?.Invoke();
@@ -70,23 +69,53 @@ public class GameManager : MonoBehaviour
 
         BigInteger cost = new BigInteger(build.GetCost());
 
-        if (totalCurrency >= cost)
+        if (TrySpendCurrency(cost))
         {
-            totalCurrency -= cost;
             build.BuyBuild();
-            OnCurrencyChanged?.Invoke();
-            Debug.Log("New cost" + cost);
         }
         else
         {
-            Debug.Log("Cant buy now");
+
         }
     }
+     public void BuyUpgrade(Upgrade upgrade, SO_Builds data)
+    {
+        BuildScript build_ = GetBuildByData(data);
+        if (build_ == null)
+        {
+            return;
+        }
+        if(build_.level >= upgrade.unlockedLevel && TrySpendCurrency(upgrade.price))
+        {
+            upgrade.BuyUpgrade();
+        }
+    }
+    private bool TrySpendCurrency(BigInteger amount)
+    {
+        if (totalCurrency >= amount)
+        {
+            totalCurrency -= amount;
+            OnCurrencyChanged?.Invoke();
+            return true;
+        }
+
+        return false;
+        }
+
     public List<BuildScript> GetBuilds()
     {
         return builds;
     }
-  
+    public BuildScript GetBuildByData(SO_Builds data)
+    {   
+        foreach (BuildScript build in builds)
+        {
+            if (build.data == data)
+                return build;
+        }
+
+        return null;
+    }
     void Update()
     {
         CalculatePerSecondIncome();

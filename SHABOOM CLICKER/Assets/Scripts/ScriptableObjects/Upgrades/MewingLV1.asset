@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b15637ca20ab214cac18d645028e10e, type: 3}
+  m_Name: MewingLV1
+  m_EditorClassIdentifier: Assembly-CSharp::MewingUpgrades
+  name: Keep It On The Ceiling
+  description: Your tongue stays on the roof of your mouth 24/7. You mew even while
+    sleeping
+  effectDescription: 2x Mewing production. 2x click value
+  price: 0
+  unlockedLevel: 0
+  mewingData: {fileID: 0}
