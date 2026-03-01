@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]private BigInteger totalCurrency;
     [SerializeField]private double currencyPerSecond;
     [SerializeField]private float clickValue;
+    private int clickMultiplier = 1;
     [SerializeField]private List<BuildScript> builds;
     public System.Action OnCurrencyChanged;
     
@@ -27,9 +28,13 @@ public class GameManager : MonoBehaviour
     public void ClickFarm()
     {
         int baseValue = 1;
-        clickValue = baseValue;
+        clickValue = baseValue * clickMultiplier;
         totalCurrency += (BigInteger)clickValue;
         OnCurrencyChanged?.Invoke();
+    }
+    public void IncreaseClickMultiplier(int multiplier_)
+    {
+        clickMultiplier *= multiplier_;
     }
     public void CalculatePerSecondIncome()
     {
@@ -78,14 +83,9 @@ public class GameManager : MonoBehaviour
 
         }
     }
-     public void BuyUpgrade(Upgrade upgrade, SO_Builds data)
+     public void BuyUpgrade(Upgrade upgrade)
     {
-        BuildScript build_ = GetBuildByData(data);
-        if (build_ == null)
-        {
-            return;
-        }
-        if(build_.level >= upgrade.unlockedLevel && TrySpendCurrency(upgrade.price))
+        if(TrySpendCurrency(upgrade.price))
         {
             upgrade.BuyUpgrade();
         }

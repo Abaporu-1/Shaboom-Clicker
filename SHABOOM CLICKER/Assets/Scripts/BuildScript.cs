@@ -18,5 +18,8 @@ public class BuildScript
     {
         level++;
     }
-
+    public void MultiplyMultiplier(int multiplier_)
+    {
+        multiplier*=multiplier_;
+    }
 }

@@ -6,6 +6,6 @@ public class Upgrade : ScriptableObject
     public string description;
     public string effectDescription;
     public int price;
-     public int unlockedLevel;
+    public int unlockedLevel;
     public virtual void BuyUpgrade(){}
 }
