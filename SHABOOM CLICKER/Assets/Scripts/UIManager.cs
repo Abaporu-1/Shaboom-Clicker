@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance {get;private set;}
     [SerializeField] private GameObject[] canvas;
+    [SerializeField] private GameObject[] shopPanel;
     private int currentIndex = -1;
+    private int shopCurrentIndex = -1;
     [SerializeField] private TMP_Text textTotalIncome, textIncomePerSecond;
     [SerializeField] private TMP_Text[] costText;
     void Awake()
@@ -59,6 +61,7 @@ public class UIManager : MonoBehaviour
     }
   public void OpenCanva(int index)
     {
+        if (index < 0 || index >= canvas.Length) return;
         if (index == currentIndex) return;
         if (currentIndex >= 0)
         {
@@ -66,5 +69,16 @@ public class UIManager : MonoBehaviour
         }
         canvas[index].SetActive(true);
         currentIndex = index;
+    }
+    public void ChangeShopScreen(int index)
+    {
+         if (index < 0 || index >= shopPanel.Length) return;
+        if (index == shopCurrentIndex) return;
+        if (shopCurrentIndex >= 0)
+        {
+            shopPanel[shopCurrentIndex].SetActive(false);
+        }
+        shopPanel[index].SetActive(true);
+        shopCurrentIndex = index;
     }
 }
