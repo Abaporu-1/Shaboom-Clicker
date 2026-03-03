@@ -25,6 +25,24 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
+      void Start()
+    {
+        SaveThings.Load();
+        Debug.Log(Application.persistentDataPath);
+    }
+    void Update()
+    {
+        CalculatePerSecondIncome();
+        SetPerSecondIncome();
+    }
+    public void SaveGame()
+    {
+        SaveThings.Save();
+    }
+    public void LoadGame()
+    {
+        SaveThings.Load();
+    }
     public void ClickFarm()
     {
         int baseValue = 1;
@@ -116,10 +134,27 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
-    void Update()
+     #region Save & Load
+    public void Save(ref AuraSaveData auraData)
     {
-        CalculatePerSecondIncome();
-        SetPerSecondIncome();
-        Debug.Log("Total Currency: "+ totalCurrency);
+        auraData.totalCurrency = totalCurrency.ToString();
     }
+    public void Load(AuraSaveData auraData)
+    {
+        totalCurrency = BigInteger.Parse(auraData.totalCurrency);
+        OnCurrencyChanged?.Invoke();
+    }
+    #endregion
+    private void OnApplicationQuit()
+    {
+        SaveThings.Save();
+    }
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            SaveThings.Save();
+        }
+    }
+
 }
