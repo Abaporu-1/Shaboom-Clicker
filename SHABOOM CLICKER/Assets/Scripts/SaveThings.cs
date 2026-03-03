@@ -1,4 +1,3 @@
-using System.Numerics;
 using UnityEngine;
 using System.IO;
 
@@ -9,6 +8,7 @@ public class SaveThings
     public struct SaveData
     {
         public AuraSaveData auraData;
+        public BuildsData buildsData;
     }
     public static string SaveFileName()
     {
@@ -32,15 +32,23 @@ public class SaveThings
     }
     private static void HandleSaveData()
     {
-        GameManager.Instance.Save(ref _saveData.auraData);
+        GameManager.Instance.Save(ref _saveData.auraData, ref _saveData.buildsData);
     }
     private static void HandleLoadData()
     {
-        GameManager.Instance.Load(_saveData.auraData);
+        GameManager.Instance.Load(_saveData.auraData, _saveData.buildsData);
     }
 }
 [System.Serializable]
 public struct AuraSaveData
 {
     public string totalCurrency;
+}
+[System.Serializable]
+public struct BuildsData
+{
+    public int[] level;
+    public int[] multiplier;
+    public int clickMultiplier;
+
 }
