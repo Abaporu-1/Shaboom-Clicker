@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 
@@ -5,7 +6,7 @@ public class BuildScript
 {
     public SO_Builds data;
     public int level = 0;
-    public float multiplier = 1f;
+    public int multiplier = 1;
     public double GetProduction()
     {
         return (data.baseProduction * multiplier) * level;
@@ -20,6 +21,6 @@ public class BuildScript
     }
     public void MultiplyMultiplier(int multiplier_)
     {
-        multiplier*=multiplier_;
+        multiplier *= multiplier_;
     }
 }
