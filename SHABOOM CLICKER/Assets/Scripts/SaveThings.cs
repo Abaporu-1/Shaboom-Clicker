@@ -24,11 +24,14 @@ public class SaveThings
     }
     public static void Load()
     {
-        string saveContent = File.ReadAllText(SaveFileName());
-        Debug.Log("READ SAVEFILE");
-        _saveData = JsonUtility.FromJson<SaveData>(saveContent);
-        Debug.Log("LOAD");
-        HandleLoadData();
+        if (File.Exists(SaveFileName()))
+        {
+            string saveContent = File.ReadAllText(SaveFileName());
+            Debug.Log("READ SAVEFILE");
+            _saveData = JsonUtility.FromJson<SaveData>(saveContent);
+            Debug.Log("LOAD");
+            HandleLoadData();
+        }
     }
     private static void HandleSaveData()
     {
