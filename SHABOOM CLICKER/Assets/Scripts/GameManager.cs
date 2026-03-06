@@ -115,10 +115,11 @@ public class GameManager : MonoBehaviour
     }
      public void BuyUpgrade(Upgrade upgrade)
     {
-        if(TrySpendCurrency(upgrade.price))
+        if(upgrade.CanBuy() && TrySpendCurrency(upgrade.price))
         {
             upgrade.BuyUpgrade();
         }
+        Debug.Log(upgrade.CanBuy());
     }
     private bool TrySpendCurrency(BigInteger amount)
     {

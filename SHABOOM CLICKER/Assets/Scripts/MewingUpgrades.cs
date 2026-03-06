@@ -4,7 +4,6 @@ public class MewingUpgrades : Upgrade
 {
     public SO_Builds mewingData;
     private int duplicator = 2;
-    private bool[] haveUpgrade = new bool[10];
     public override void BuyUpgrade()
     {
         BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
@@ -22,13 +21,13 @@ public class MewingUpgrades : Upgrade
                 break;
             }
             Debug.Log(upgradeIndex);
-            haveUpgrade[upgradeIndex - 1] = true;
+            UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1] = true;
         }
     }
     public override bool CanBuy()
     {
         BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
-        if(build_.level >= unlockedLevel && !haveUpgrade[upgradeIndex - 1])
+        if(build_.level >= unlockedLevel && !UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1])
         {
             return true;
         }
