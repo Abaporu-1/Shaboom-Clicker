@@ -15,8 +15,18 @@ public class UpgradeManager : MonoBehaviour
             Instance = this;
         }
     }
-    void Start()
-    {
+  #region SAVE & LOAD
 
+    public void Save(ref UpgradesData upgradesData)
+    {
+       upgradesData.mewingHaveUpgrade = (bool[])mewingHaveUpgrade.Clone();
     }
+      public void Load(UpgradesData upgradesData)
+    {
+        if(upgradesData.mewingHaveUpgrade != null && upgradesData.mewingHaveUpgrade.Length == mewingHaveUpgrade.Length)
+        {
+            mewingHaveUpgrade = (bool[])upgradesData.mewingHaveUpgrade.Clone();
+        }
+    }
+  #endregion
 }
