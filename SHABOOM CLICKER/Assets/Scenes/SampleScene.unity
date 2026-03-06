@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5162611}
   - component: {fileID: 5162610}
   m_Layer: 5
-  m_Name: Workout
+  m_Name: MewingLV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6949,11 +6949,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 445949657}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: BuyBuild
-        m_Mode: 3
+        m_MethodName: BuyUpgrade
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: c6e80715a24e6434c8377f8192076c11, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Upgrade, Assembly-CSharp
           m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7855,7 +7855,7 @@ GameObject:
   - component: {fileID: 1085718661}
   - component: {fileID: 1085718660}
   m_Layer: 5
-  m_Name: Mewing
+  m_Name: MewingLV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

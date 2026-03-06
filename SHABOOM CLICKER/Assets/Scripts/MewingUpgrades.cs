@@ -3,12 +3,12 @@ using UnityEngine;
 public class MewingUpgrades : Upgrade
 {
     public SO_Builds mewingData;
-    public int upgradeIndex;
     private int duplicator = 2;
+    private bool[] haveUpgrade = new bool[10];
     public override void BuyUpgrade()
     {
         BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
-        if(build_.level >= unlockedLevel)
+        if(CanBuy())
         {
             switch (upgradeIndex)
             {
@@ -21,6 +21,17 @@ public class MewingUpgrades : Upgrade
                 GameManager.Instance.IncreaseClickMultiplier(duplicator);
                 break;
             }
+            Debug.Log(upgradeIndex);
+            haveUpgrade[upgradeIndex - 1] = true;
         }
+    }
+    public override bool CanBuy()
+    {
+        BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
+        if(build_.level >= unlockedLevel && !haveUpgrade[upgradeIndex - 1])
+        {
+            return true;
+        }
+        return false;
     }
 }
