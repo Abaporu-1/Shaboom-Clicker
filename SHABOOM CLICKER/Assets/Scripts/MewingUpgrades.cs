@@ -16,6 +16,10 @@ public class MewingUpgrades : Upgrade
                 build_.MultiplyMultiplier(duplicator);
                 GameManager.Instance.IncreaseClickMultiplier(duplicator);
                 break;
+                case 2:
+                build_.MultiplyMultiplier(duplicator);
+                GameManager.Instance.IncreaseClickMultiplier(duplicator);
+                break;
             }
         }
     }
