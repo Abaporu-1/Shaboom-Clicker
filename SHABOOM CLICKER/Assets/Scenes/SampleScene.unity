@@ -9071,9 +9071,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59c7f9eb32936b46b33437eace9f261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
-  mewingUpgrades:
-  - {fileID: 11400000, guid: 3871dcefa4aaa024a821a3f6512dc8ae, type: 2}
-  - {fileID: 11400000, guid: c6e80715a24e6434c8377f8192076c11, type: 2}
   mewingHaveUpgrade: 0000
 --- !u!1 &1383739579
 GameObject:
