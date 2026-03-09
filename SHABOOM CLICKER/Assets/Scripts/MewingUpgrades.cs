@@ -27,7 +27,7 @@ public class MewingUpgrades : Upgrade
     public override bool CanBuy()
     {
         BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
-        if(IsUnlocked(build_.level) && !UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1])
+        if(build_.level >= unlockedLevel && !UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1])
         {
             return true;
         }

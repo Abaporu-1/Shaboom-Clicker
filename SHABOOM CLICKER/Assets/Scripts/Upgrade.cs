@@ -10,9 +10,4 @@ public class Upgrade : ScriptableObject
     public int upgradeIndex;
     public virtual void BuyUpgrade(){}
     public virtual bool CanBuy(){return false;}
-    public virtual bool IsUnlocked(int buildLevel)
-    {
-        if(buildLevel >= unlockedLevel) return true; 
-        return false;
-    }
 }
