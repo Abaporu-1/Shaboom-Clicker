@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
       void Start()
     {
         SaveThings.Load();
-        Debug.Log(Application.persistentDataPath);
     }
     void Update()
     {
@@ -119,7 +118,6 @@ public class GameManager : MonoBehaviour
         {
             upgrade.BuyUpgrade();
         }
-        Debug.Log(upgrade.CanBuy());
     }
     private bool TrySpendCurrency(BigInteger amount)
     {
