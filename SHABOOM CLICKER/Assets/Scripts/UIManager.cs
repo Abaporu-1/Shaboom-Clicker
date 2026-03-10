@@ -2,6 +2,7 @@ using System.Numerics;
 using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class UIManager : MonoBehaviour
     private int shopCurrentIndex = -1;
     [SerializeField] private TMP_Text textTotalIncome, textIncomePerSecond;
     [SerializeField] private TMP_Text[] costText;
+    [SerializeField] private UpgradeHolder[] upgradeObjects;
     void Awake()
     {
         if(Instance!=null && Instance != this)
@@ -23,16 +25,19 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
     }
-    private void Start()
+    void OnEnable()
     {
         GameManager.Instance.OnCurrencyChanged += UIAuraAmount;
-        UIAuraAmount();
+        GameManager.Instance.OnBuildsBought += BoughtBuild;
+        GameManager.Instance.OnUpgradeBought += BoughtUpgrade;
     }
     private void OnDestroy()
     {
         if (GameManager.Instance != null)
         {
             GameManager.Instance.OnCurrencyChanged -= UIAuraAmount;
+            GameManager.Instance.OnBuildsBought -= BoughtBuild;
+            GameManager.Instance.OnUpgradeBought -= BoughtUpgrade;
         }
     }
     private void UIAuraAmount()
@@ -41,7 +46,6 @@ public class UIManager : MonoBehaviour
         double currencyPerSecond = GameManager.Instance.ShareCurrencyPerSecondAmount();
         textTotalIncome.text = NumberFormatter.Format(totalCurrency) + " Aura";
         textIncomePerSecond.text = NumberFormatter.Format(currencyPerSecond) + " a/s";
-        UpdateAllBuildCosts(GameManager.Instance.GetBuilds());
     }
     public void UpdateAllBuildCosts(List<BuildScript> builds)
     {
@@ -80,5 +84,22 @@ public class UIManager : MonoBehaviour
         }
         shopPanel[index].SetActive(true);
         shopCurrentIndex = index;
+    }
+    private void BoughtBuild()
+    {
+        UpdateAllBuildCosts(GameManager.Instance.GetBuilds());
+        ShowUpgrade();
+    }
+    private void BoughtUpgrade()
+    {
+        ShowUpgrade();
+    }
+    private void ShowUpgrade()
+    {
+        foreach(UpgradeHolder upgradeObject in upgradeObjects)
+        {
+            if(upgradeObject.upgrade.CanBuy()) upgradeObject.gameObject.SetActive(true);
+            else upgradeObject.gameObject.SetActive(false);
+        }
     }
 }

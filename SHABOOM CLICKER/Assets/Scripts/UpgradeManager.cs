@@ -21,7 +21,7 @@ public class UpgradeManager : MonoBehaviour
     {
        upgradesData.mewingHaveUpgrade = (bool[])mewingHaveUpgrade.Clone();
     }
-      public void Load(UpgradesData upgradesData)
+    public void Load(UpgradesData upgradesData)
     {
         if(upgradesData.mewingHaveUpgrade != null && upgradesData.mewingHaveUpgrade.Length == mewingHaveUpgrade.Length)
         {

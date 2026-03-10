@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     private int clickMultiplier = 1;
     [SerializeField]private List<BuildScript> builds;
     public System.Action OnCurrencyChanged;
+    public System.Action OnBuildsBought;
+    public System.Action OnUpgradeBought;
     
 
     void Awake()
@@ -38,6 +40,8 @@ public class GameManager : MonoBehaviour
       void Start()
     {
         SaveThings.Load();
+        OnCurrencyChanged?.Invoke();
+        OnBuildsBought?.Invoke();
     }
     void Update()
     {
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
         if (TrySpendCurrency(cost))
         {
             build.BuyBuild();
+            OnBuildsBought?.Invoke();
         }
         else
         {
@@ -117,6 +122,7 @@ public class GameManager : MonoBehaviour
         if(upgrade.CanBuy() && TrySpendCurrency(upgrade.price))
         {
             upgrade.BuyUpgrade();
+            OnUpgradeBought?.Invoke();
         }
     }
     private bool TrySpendCurrency(BigInteger amount)
@@ -200,7 +206,6 @@ public class GameManager : MonoBehaviour
             }
             
         }
-        OnCurrencyChanged?.Invoke();
     }
     #endregion
     private void OnApplicationQuit()
