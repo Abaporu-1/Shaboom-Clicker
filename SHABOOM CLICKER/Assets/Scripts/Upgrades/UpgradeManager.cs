@@ -3,6 +3,7 @@ using UnityEngine;
 public class UpgradeManager : MonoBehaviour
 {
     public bool[] mewingHaveUpgrade;
+    public bool[] workoutHaveUpgrade;
     public static UpgradeManager Instance {get;private set;}
     void Awake()
     {
@@ -13,6 +14,18 @@ public class UpgradeManager : MonoBehaviour
         else
         {
             Instance = this;
+        }
+    }
+    public bool[] ChooseBool(SO_Builds data)
+    {
+        string name = data.name;
+        switch (name)
+        {
+            default: return null;
+            case "Mewing":
+            return mewingHaveUpgrade;
+            case "Workout":
+            return workoutHaveUpgrade;
         }
     }
   #region SAVE & LOAD

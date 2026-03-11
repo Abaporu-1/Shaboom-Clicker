@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b15637ca20ab214cac18d645028e10e, type: 3}
-  m_Name: MewingLV2
+  m_Name: MewingLV3
   m_EditorClassIdentifier: Assembly-CSharp::MewingUpgrades
-  name: Chewing Gum
-  description: Jaw goes brrr
-  effectDescription: 2x Mewing production. 2x click value
-  price: 100
-  unlockedLevel: 1
-  mewingData: {fileID: 11400000, guid: 233cf1dd255a15441893cf8424a75151, type: 2}
-  upgradeIndex: 2
+  name: Sharpened Jawline
+  description: Sharp enough to cut fruits
+  effectDescription: 2x Mewing production
+  price: 1000
+  unlockedLevel: 10
+  upgradeIndex: 3
+  data: {fileID: 11400000, guid: 233cf1dd255a15441893cf8424a75151, type: 2}
+  duplicator: 2

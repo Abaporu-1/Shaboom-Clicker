@@ -2,11 +2,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class MewingUpgrades : Upgrade
 {
-    public SO_Builds mewingData;
-    private int duplicator = 2;
     public override void BuyUpgrade()
     {
-        BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
+        BuildScript build_ = GameManager.Instance.GetBuildByData(data);
+        bool[] haveUpgrade = UpgradeManager.Instance.ChooseBool(data);
         if(CanBuy())
         {
             switch (upgradeIndex)
@@ -21,16 +20,7 @@ public class MewingUpgrades : Upgrade
                 break;
             }
             Debug.Log(upgradeIndex);
-            UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1] = true;
+            haveUpgrade[upgradeIndex - 1] = true;
         }
-    }
-    public override bool CanBuy()
-    {
-        BuildScript build_ = GameManager.Instance.GetBuildByData(mewingData);
-        if(build_.level >= unlockedLevel && !UpgradeManager.Instance.mewingHaveUpgrade[upgradeIndex - 1])
-        {
-            return true;
-        }
-        return false;
     }
 }
