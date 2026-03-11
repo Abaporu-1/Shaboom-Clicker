@@ -7,5 +7,7 @@ public class Upgrade : ScriptableObject
     public string effectDescription;
     public int price;
     public int unlockedLevel;
+    public int upgradeIndex;
     public virtual void BuyUpgrade(){}
+    public virtual bool CanBuy(){return false;}
 }
