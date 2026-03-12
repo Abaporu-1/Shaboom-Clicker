@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Protein Overdose
   description: fart smells bad
   effectDescription: 2x Workout production
-  price: 10000000
+  price: 72000000
   unlockedLevel: 250
   upgradeIndex: 8
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

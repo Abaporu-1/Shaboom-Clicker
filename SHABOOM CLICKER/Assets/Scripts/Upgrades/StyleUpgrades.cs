@@ -1,16 +1,5 @@
 using UnityEngine;
-
-public class StyleUpgrades : MonoBehaviour
+[CreateAssetMenu]
+public class StyleUpgrades : Upgrade
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

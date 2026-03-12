@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Absolute Unit
   description: Built different. All gym bros kneel
   effectDescription: 2x Workout production
-  price: 50000000
+  price: 200000000
   unlockedLevel: 300
   upgradeIndex: 9
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

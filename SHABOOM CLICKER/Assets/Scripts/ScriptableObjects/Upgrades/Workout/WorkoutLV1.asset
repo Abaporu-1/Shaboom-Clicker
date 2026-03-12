@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Baldman Training
   description: 100 push ups. 100 squats. 100 sit ups. 10km run. No excuses
   effectDescription: 2x Workout production
-  price: 500
+  price: 1500
   unlockedLevel: 1
   upgradeIndex: 1
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

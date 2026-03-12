@@ -1,16 +1,5 @@
 using UnityEngine;
-
-public class ColdBathUpgrades : MonoBehaviour
+[CreateAssetMenu]
+public class ColdBathUpgrades : Upgrade
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

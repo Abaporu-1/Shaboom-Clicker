@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Your tongue stays on the roof of your mouth 24/7. You mew even while
     sleeping
   effectDescription: 2x Mewing production. 2x click value
-  price: 100
+  price: 500
   unlockedLevel: 1
   upgradeIndex: 1
   data: {fileID: 11400000, guid: 233cf1dd255a15441893cf8424a75151, type: 2}

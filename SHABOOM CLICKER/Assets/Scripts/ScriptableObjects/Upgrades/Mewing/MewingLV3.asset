@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Sharpened Jawline
   description: Sharp enough to cut fruits
   effectDescription: 2x Mewing production
-  price: 1000
+  price: 25000
   unlockedLevel: 10
   upgradeIndex: 3
   data: {fileID: 11400000, guid: 233cf1dd255a15441893cf8424a75151, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Eternal Pump
   description: pumped 24/7. must be creatine
   effectDescription: 2x Workout production
-  price: 5000000
+  price: 30000000
   unlockedLevel: 200
   upgradeIndex: 7
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

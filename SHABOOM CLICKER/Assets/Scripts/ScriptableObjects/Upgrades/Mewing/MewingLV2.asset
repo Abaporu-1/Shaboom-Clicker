@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Chewing Gum
   description: Jaw goes brrr
   effectDescription: 2x Mewing production. 2x click value
-  price: 100
+  price: 1000
   unlockedLevel: 1
   upgradeIndex: 2
   data: {fileID: 11400000, guid: 233cf1dd255a15441893cf8424a75151, type: 2}
