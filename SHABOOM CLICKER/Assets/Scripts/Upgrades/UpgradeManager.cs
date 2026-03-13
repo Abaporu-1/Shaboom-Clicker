@@ -4,6 +4,7 @@ public class UpgradeManager : MonoBehaviour
 {
     public bool[] mewingHaveUpgrade;
     public bool[] workoutHaveUpgrade;
+    public bool[] styleHaveUpgrade;
     public static UpgradeManager Instance {get;private set;}
     void Awake()
     {
@@ -32,13 +33,23 @@ public class UpgradeManager : MonoBehaviour
 
     public void Save(ref UpgradesData upgradesData)
     {
-       upgradesData.mewingHaveUpgrade = (bool[])mewingHaveUpgrade.Clone();
+        upgradesData.mewingHaveUpgrade = (bool[])mewingHaveUpgrade.Clone();
+        upgradesData.workoutHaveUpgrade = (bool[])workoutHaveUpgrade.Clone();
+        upgradesData.styleHaveUpgrade = (bool[])styleHaveUpgrade.Clone();
     }
     public void Load(UpgradesData upgradesData)
     {
         if(upgradesData.mewingHaveUpgrade != null && upgradesData.mewingHaveUpgrade.Length == mewingHaveUpgrade.Length)
         {
             mewingHaveUpgrade = (bool[])upgradesData.mewingHaveUpgrade.Clone();
+        }
+        if(upgradesData.workoutHaveUpgrade != null && upgradesData.workoutHaveUpgrade.Length == workoutHaveUpgrade.Length)
+        {
+            workoutHaveUpgrade = (bool[])upgradesData.workoutHaveUpgrade.Clone();
+        }
+        if(upgradesData.styleHaveUpgrade != null && upgradesData.styleHaveUpgrade.Length == styleHaveUpgrade.Length)
+        {
+            styleHaveUpgrade = (bool[])upgradesData.styleHaveUpgrade.Clone();
         }
     }
   #endregion

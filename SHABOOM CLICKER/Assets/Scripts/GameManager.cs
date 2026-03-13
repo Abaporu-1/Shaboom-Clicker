@@ -133,7 +133,6 @@ public class GameManager : MonoBehaviour
             OnCurrencyChanged?.Invoke();
             return true;
         }
-
         return false;
         }
 
@@ -148,7 +147,6 @@ public class GameManager : MonoBehaviour
             if (build.data == data)
                 return build;
         }
-
         return null;
     }
      #region Save & Load

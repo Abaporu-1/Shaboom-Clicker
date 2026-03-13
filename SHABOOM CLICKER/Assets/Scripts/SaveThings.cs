@@ -56,10 +56,11 @@ public struct BuildsData
     public int[] level;
     public int[] multiplier;
     public int clickMultiplier;
-
 }
 [System.Serializable]
 public struct UpgradesData
 {
     public bool[] mewingHaveUpgrade;
+    public bool[] workoutHaveUpgrade;
+    public bool[] styleHaveUpgrade;
 }
