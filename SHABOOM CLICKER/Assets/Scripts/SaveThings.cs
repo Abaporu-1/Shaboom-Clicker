@@ -63,4 +63,5 @@ public struct UpgradesData
     public bool[] mewingHaveUpgrade;
     public bool[] workoutHaveUpgrade;
     public bool[] styleHaveUpgrade;
+    public bool[] looksHaveUpgrade;
 }

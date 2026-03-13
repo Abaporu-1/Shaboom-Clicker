@@ -5,7 +5,7 @@ public class Upgrade : ScriptableObject
     public new string name;
     public string description;
     public string effectDescription;
-    public int price;
+    public string price;
     public int unlockedLevel;
     public int upgradeIndex;
     public SO_Builds data;
