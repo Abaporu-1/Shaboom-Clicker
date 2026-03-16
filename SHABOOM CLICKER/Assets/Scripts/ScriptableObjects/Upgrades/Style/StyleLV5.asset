@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Stylish One
   description: chat is this drip? Ws
   effectDescription: 2x Style production
-  price: 10000000
+  price: 15000000
   unlockedLevel: 100
   upgradeIndex: 5
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

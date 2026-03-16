@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Nailed it
   description: Nailed it. again.
   effectDescription: 2x Style production
-  price: 300000000
+  price: 400000000
   unlockedLevel: 250
   upgradeIndex: 8
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

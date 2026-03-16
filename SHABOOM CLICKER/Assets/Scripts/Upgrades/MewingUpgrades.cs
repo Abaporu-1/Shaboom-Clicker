@@ -18,6 +18,10 @@ public class MewingUpgrades : Upgrade
                 build_.MultiplyMultiplier(duplicator);
                 GameManager.Instance.IncreaseClickMultiplier(duplicator);
                 break;
+                case 3:
+                build_.MultiplyMultiplier(duplicator);
+                GameManager.Instance.IncreaseClickMultiplier(duplicator);
+                break;
             }
             Debug.Log(upgradeIndex);
             haveUpgrade[upgradeIndex - 1] = true;

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Unwavered Drip
   description: this has to be illegal.
   effectDescription: 2x Style production
-  price: 110000000
+  price: 150000000
   unlockedLevel: 200
   upgradeIndex: 7
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Calisthenics
   description: What the sigma"? That's some fire mobility
   effectDescription: 2x Workout production
-  price: 10000
+  price: 15000
   unlockedLevel: 5
   upgradeIndex: 2
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

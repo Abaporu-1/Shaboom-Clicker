@@ -16,7 +16,7 @@ MonoBehaviour:
   description: you approach your full potential and start to despair. you want to
     be more handsome. you need to be more handsome
   effectDescription: 2x Looksmaxxing production
-  price: 480000000
+  price: 640000000
   unlockedLevel: 200
   upgradeIndex: 7
   data: {fileID: 11400000, guid: 4ac0ff3f39e75a147abb369288aa5d09, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f1efdece4d894abe26100bb29d37d, type: 3}
+  m_Name: ColdLV6
+  m_EditorClassIdentifier: Assembly-CSharp::ColdBathUpgrades
+  name: Body heat
+  description: snow melts when you touch it
+  effectDescription: 2x Cold Bath production
+  price: 3000000000
+  unlockedLevel: 150
+  upgradeIndex: 6
+  data: {fileID: 11400000, guid: b2728539950674347ae97c2d4f7045ce, type: 2}
+  duplicator: 2

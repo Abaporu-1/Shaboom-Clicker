@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Magnificent Hair
   description: you gotta respect your barber
   effectDescription: 2x Looksmaxxing production
-  price: 10000000
+  price: 15000000
   unlockedLevel: 50
   upgradeIndex: 4
   data: {fileID: 11400000, guid: 4ac0ff3f39e75a147abb369288aa5d09, type: 2}

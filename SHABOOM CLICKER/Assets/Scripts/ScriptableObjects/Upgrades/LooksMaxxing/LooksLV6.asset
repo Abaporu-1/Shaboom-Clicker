@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Narcisus
   description: you start falling for yourself
   effectDescription: 2x Looksmaxxing production
-  price: 180000000
+  price: 200000000
   unlockedLevel: 150
   upgradeIndex: 6
   data: {fileID: 11400000, guid: 4ac0ff3f39e75a147abb369288aa5d09, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
   description: you feel like someone clipped your wings. you're the most handsome
     man on earth, and you still think it's not enough
   effectDescription: 2x Looksmaxxing production
-  price: 1200000000
+  price: 1600000000
   unlockedLevel: 250
   upgradeIndex: 8
   data: {fileID: 11400000, guid: 4ac0ff3f39e75a147abb369288aa5d09, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Let him cook
   description: yeah... science
   effectDescription: 2x Style production
-  price: 500000
+  price: 600000
   unlockedLevel: 25
   upgradeIndex: 3
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Bespoke Suit
   description: Very well tailored
   effectDescription: 2x Style production
-  price: 2500000
+  price: 3600000
   unlockedLevel: 50
   upgradeIndex: 4
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

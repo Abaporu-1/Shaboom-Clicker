@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Own Brand
   description: npcs copy your fit
   effectDescription: 2x Style production
-  price: 30000000
+  price: 40000000
   unlockedLevel: 150
   upgradeIndex: 6
   data: {fileID: 11400000, guid: d70c8577e3f295843a12c2c6196226e9, type: 2}

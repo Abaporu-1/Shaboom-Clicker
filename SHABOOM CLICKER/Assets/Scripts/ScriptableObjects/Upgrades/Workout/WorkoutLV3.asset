@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Grandma's Compliments
   description: Who's my buff boi?
   effectDescription: 2x Workout production
-  price: 100000
+  price: 150000
   unlockedLevel: 25
   upgradeIndex: 3
   data: {fileID: 11400000, guid: cdf76605d4492534b8519d62a8279f08, type: 2}

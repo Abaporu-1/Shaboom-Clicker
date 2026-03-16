@@ -15,7 +15,7 @@ MonoBehaviour:
   name: The Look
   description: reminds me of a certain model
   effectDescription: 2x Looksmaxxing production
-  price: 40000000
+  price: 50000000
   unlockedLevel: 100
   upgradeIndex: 5
   data: {fileID: 11400000, guid: 4ac0ff3f39e75a147abb369288aa5d09, type: 2}
