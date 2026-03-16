@@ -6,6 +6,7 @@ public class UpgradeManager : MonoBehaviour
     public bool[] workoutHaveUpgrade;
     public bool[] styleHaveUpgrade;
     public bool[] looksHaveUpgrade;
+    public bool[] meditationHaveUpgrade;
     public static UpgradeManager Instance {get;private set;}
     void Awake()
     {
@@ -32,6 +33,8 @@ public class UpgradeManager : MonoBehaviour
             return styleHaveUpgrade;
             case "LooksMaxxing":
             return looksHaveUpgrade;
+            case "Meditation":
+            return meditationHaveUpgrade;
         }
     }
   #region SAVE & LOAD
@@ -42,6 +45,7 @@ public class UpgradeManager : MonoBehaviour
         upgradesData.workoutHaveUpgrade = (bool[])workoutHaveUpgrade.Clone();
         upgradesData.styleHaveUpgrade = (bool[])styleHaveUpgrade.Clone();
         upgradesData.looksHaveUpgrade = (bool[])looksHaveUpgrade.Clone();
+        upgradesData.meditationHaveUpgrade = (bool[])meditationHaveUpgrade.Clone();
     }
     public void Load(UpgradesData upgradesData)
     {
@@ -60,6 +64,10 @@ public class UpgradeManager : MonoBehaviour
         if(upgradesData.looksHaveUpgrade != null && upgradesData.looksHaveUpgrade.Length == looksHaveUpgrade.Length)
         {
             looksHaveUpgrade = (bool[])upgradesData.looksHaveUpgrade.Clone();
+        }
+        if(upgradesData.meditationHaveUpgrade != null && upgradesData.meditationHaveUpgrade.Length == meditationHaveUpgrade.Length)
+        {
+            meditationHaveUpgrade = (bool[])upgradesData.meditationHaveUpgrade.Clone();
         }
     }
   #endregion

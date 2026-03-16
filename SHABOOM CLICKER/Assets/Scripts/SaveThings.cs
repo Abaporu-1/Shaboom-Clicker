@@ -64,4 +64,5 @@ public struct UpgradesData
     public bool[] workoutHaveUpgrade;
     public bool[] styleHaveUpgrade;
     public bool[] looksHaveUpgrade;
+    public bool[] meditationHaveUpgrade;
 }
