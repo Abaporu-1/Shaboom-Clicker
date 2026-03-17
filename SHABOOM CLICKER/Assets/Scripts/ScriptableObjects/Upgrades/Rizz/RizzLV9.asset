@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddbdcd4779b89844b9068eef01867ae, type: 3}
+  m_Name: RizzLV9
+  m_EditorClassIdentifier: Assembly-CSharp::RizzUpgrades
+  name: Forgiveness
+  description: you ask for your master's forgiveness. he forgives you... and ascends.
+    it's your time to become The Rizzler.
+  effectDescription: 2x Rizz production
+  price: 250000000000
+  unlockedLevel: 300
+  upgradeIndex: 9
+  data: {fileID: 11400000, guid: 9e557df04bf541a4483cf7be5eb413e5, type: 2}
+  duplicator: 2

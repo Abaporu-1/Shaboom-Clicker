@@ -66,4 +66,5 @@ public struct UpgradesData
     public bool[] looksHaveUpgrade;
     public bool[] meditationHaveUpgrade;
     public bool[] coldHaveUpgrade;
+    public bool[] rizzHaveUpgrade;
 }

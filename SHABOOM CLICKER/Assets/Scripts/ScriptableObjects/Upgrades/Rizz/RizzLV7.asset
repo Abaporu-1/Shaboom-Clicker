@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fddbdcd4779b89844b9068eef01867ae, type: 3}
+  m_Name: RizzLV7
+  m_EditorClassIdentifier: Assembly-CSharp::RizzUpgrades
+  name: Greed
+  description: '"you were the chosen one! it was said that you would destroy the
+    simps, not join them! bring balance to the rizz, no leave it in darkness!" -
+    The Rizzler'
+  effectDescription: 2x Rizz production
+  price: 50000000000
+  unlockedLevel: 200
+  upgradeIndex: 7
+  data: {fileID: 11400000, guid: 9e557df04bf541a4483cf7be5eb413e5, type: 2}
+  duplicator: 2

@@ -8,6 +8,7 @@ public class UpgradeManager : MonoBehaviour
     public bool[] looksHaveUpgrade;
     public bool[] meditationHaveUpgrade;
     public bool[] coldHaveUpgrade;
+    public bool[] rizzHaveUpgrade;
     public static UpgradeManager Instance {get;private set;}
     void Awake()
     {
@@ -38,6 +39,8 @@ public class UpgradeManager : MonoBehaviour
             return meditationHaveUpgrade;
             case "ColdBath":
             return coldHaveUpgrade;
+            case "Rizz":
+            return rizzHaveUpgrade;
         }
     }
   #region SAVE & LOAD
@@ -50,6 +53,7 @@ public class UpgradeManager : MonoBehaviour
         upgradesData.looksHaveUpgrade = (bool[])looksHaveUpgrade.Clone();
         upgradesData.meditationHaveUpgrade = (bool[])meditationHaveUpgrade.Clone();
         upgradesData.coldHaveUpgrade = (bool[])coldHaveUpgrade.Clone();
+        upgradesData.rizzHaveUpgrade = (bool[])rizzHaveUpgrade.Clone();
     }
     public void Load(UpgradesData upgradesData)
     {
@@ -76,6 +80,10 @@ public class UpgradeManager : MonoBehaviour
         if(upgradesData.coldHaveUpgrade != null && upgradesData.coldHaveUpgrade.Length == coldHaveUpgrade.Length)
         {
             coldHaveUpgrade = (bool[])upgradesData.coldHaveUpgrade.Clone();
+        }
+        if(upgradesData.rizzHaveUpgrade != null && upgradesData.rizzHaveUpgrade.Length == rizzHaveUpgrade.Length)
+        {
+            rizzHaveUpgrade = (bool[])upgradesData.rizzHaveUpgrade.Clone();
         }
     }
   #endregion
